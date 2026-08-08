@@ -1,0 +1,221 @@
+/* ===== کارت‌های آماری ===== */
+.stats-row {
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    transition: all 0.25s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-soft);
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stat-icon.purple {
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+.stat-icon.orange {
+    background: #FFFBEB;
+    color: #D97706;
+}
+
+.stat-icon.blue {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.stat-info .stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.stat-info .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ===== بخش‌های کارت ===== */
+.section-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 26px;
+    height: 100%;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: var(--text-main);
+}
+
+.section-title i {
+    color: var(--primary);
+}
+
+.section-title .badge-count {
+    background: var(--primary-soft);
+    color: var(--primary);
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+/* ===== آیتم وظیفه ===== */
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.task-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.task-item .form-check-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 14px;
+    flex-shrink: 0;
+}
+
+.task-item .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.task-item .task-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.task-item .task-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-right: 14px;
+}
+
+/* ===== آیتم همکار ===== */
+.colleague-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.colleague-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.colleague-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.colleague-info .name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.colleague-info .position {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ===== دکمه ایجاد میزکار ===== */
+.btn-create {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.2);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-create:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25);
+    color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 576px) {
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .stat-info .stat-value {
+        font-size: 1.4rem;
+    }
+
+    .section-card {
+        padding: 18px;
+    }
+}

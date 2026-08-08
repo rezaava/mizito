@@ -1,0 +1,257 @@
+/* ===== هدر پروژه‌ها ===== */
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.projects-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.btn-create-project {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    cursor: pointer;
+}
+
+.btn-create-project:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+    color: #fff;
+}
+
+.btn-create-project i {
+    font-size: 0.9rem;
+}
+
+/* ===== کارت‌های پروژه ===== */
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-soft);
+}
+
+.project-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 6px 0;
+}
+
+.project-status {
+    display: inline-block;
+    background: var(--primary-soft);
+    color: var(--primary);
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.project-progress {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.progress-track {
+    height: 6px;
+    background: var(--surface-alt);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: var(--primary);
+    transition: width 0.6s ease;
+}
+
+.project-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.project-team {
+    display: flex;
+    align-items: center;
+}
+
+.team-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid var(--surface);
+    margin-left: -8px;
+}
+
+.team-avatar:first-child {
+    margin-left: 0;
+}
+
+.team-avatar.more {
+    background: var(--border);
+    color: var(--text-muted);
+    font-size: 0.6rem;
+}
+
+.project-deadline {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ===== کارت پروژه جدید ===== */
+.project-card.new-project {
+    border: 2px dashed var(--border);
+    background: var(--surface-alt);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.project-card.new-project:hover {
+    border-color: var(--primary);
+    background: var(--primary-soft);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.new-project-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.new-project-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.project-card.new-project:hover .new-project-icon {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--surface);
+}
+
+.new-project-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 4px 0;
+}
+
+.new-project-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .projects-title {
+        font-size: 1.4rem;
+    }
+
+    .btn-create-project {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-card-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-progress {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        padding: 18px;
+    }
+
+    .project-name {
+        font-size: 1rem;
+    }
+
+    .project-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
