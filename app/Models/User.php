@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Laratrust\Contracts\LaratrustUser;
 use Laratrust\Traits\HasRolesAndPermissions;
-use App\Models\Cart;
+use App\Models\Workspace;
 
 class User extends Authenticatable implements LaratrustUser
 {
@@ -48,7 +48,11 @@ class User extends Authenticatable implements LaratrustUser
         'email_verified_at' => 'datetime',
     ];
 
-    public function cart(){
-        return $this->hasOne(Cart::class);
+    public function ownedWorkspaces(){
+        return $this->hasMany(Workspace::class);
+    }
+
+    public function workspaced(){
+        return $this->belongsToMany(Workspace::class);
     }
 }
