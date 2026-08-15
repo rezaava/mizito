@@ -7,6 +7,7 @@
 </head>
 <body>
     <form action="/register-post" method="post">
+        @CSRF
         <div>
             <label for="">name</label>
             <input type="text" name="name" id="">
@@ -21,8 +22,12 @@
         </div>
         <div>
             <label for="">password</label>
-            <input type="text" name="password" id="">
-        </div>    
+            <input type="password" name="password" id="">
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
     </form>
 </body>
 </html>

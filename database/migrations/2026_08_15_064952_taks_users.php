@@ -13,21 +13,21 @@ return new class extends Migration
     {
         //
         Schema::create('task_users', function (Blueprint $table) {
-        $table->id();
-    
-        $table->foreignId('task_id')
-              ->constrained("tasks")
-              ->cascadeOnUpdate()
-              ->cascadeOnDelete();
-    
-        $table->foreignId('user_id')
-              ->constrained("users")
-              ->cascadeOnUpdate()
-              ->cascadeOnDelete();
-    
-        $table->timestamps();
-    
-    });
+            $table->id();
+
+            $table->foreignId('task_id')
+                ->constrained('tasks')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->timestamps();
+
+        });
     }
 
     /**

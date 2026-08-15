@@ -8,4 +8,8 @@
         <label for="">password</label>
         <input type="password" name="password" id="">
     </div>
+
+    <div>
+        <button type="submit">Login</button>
+    </div>
 </form>
