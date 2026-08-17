@@ -29,7 +29,7 @@
             <div class="user-profile" id="profileToggle">
                 <div class="user-avatar">MH</div>
                 <div class="user-info d-none d-sm-block">
-                    <div class="name">مهدی حسینی</div>
+                    <div class="name"> {{ Auth::user()->name }} {{ Auth::user()->family }}</div>
                     <div class="role">مدیر محصول</div>
                 </div>
                 <i class="fas fa-chevron-down chevron"></i>

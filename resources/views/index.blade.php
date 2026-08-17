@@ -114,9 +114,9 @@
                 </div>
             </div>
 
-            <button class="btn-create">
+            <a href="#" class="btn-create">
                 <i class="fas fa-plus-circle"></i> ایجاد میزکار جدید
-            </button>
+            </a>
         </div>
     </div>
 </div>
