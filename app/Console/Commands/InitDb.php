@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
 
 class InitDb extends Command
 {
@@ -11,7 +12,7 @@ class InitDb extends Command
      *
      * @var string
      */
-    protected $signature = 'app:init-db';
+    protected $signature = 'InitDb';
 
     /**
      * The console command description.

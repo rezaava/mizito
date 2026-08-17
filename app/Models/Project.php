@@ -4,22 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Workspace;
-use App\Models\User;
-use App\Models\Task;
 
 class Project extends Model
 {
     use HasFactory;
-    public function workspace(){
+
+    public function workspace()
+    {
         return $this->belongsTo(Workspace::class);
     }
-    public function users(){
+
+    public function users()
+    {
         return $this->belongsToMany(User::class);
     }
 
-    public function tasks(){
+    public function tasks()
+    {
         return $this->hasMany(Task::class);
     }
-    
 }

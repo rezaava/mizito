@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string("name",100);
-            $table->text("discription");
+            $table->string('name', 100);
+            $table->text('discription');
             // $table->bigInteger("workspace_id")->unsigned();
-            $table->foreignId("workspace_id")->constrained("workspaces")->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('workspace_id')->constrained('workspaces')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
