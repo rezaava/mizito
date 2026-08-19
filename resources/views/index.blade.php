@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            <a href="#" class="btn-create">
+            <a href="{{ route('workspace.create') }}" class="btn-create">
                 <i class="fas fa-plus-circle"></i> ایجاد میزکار جدید
             </a>
         </div>
