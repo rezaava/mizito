@@ -30,7 +30,7 @@ class InitDb extends Command
 
         $this->comment ("progress started...");
         // Artisan::call("migrate");
-        // Artisan::call("migrate:refresh");
+        Artisan::call("migrate:refresh");
         Artisan::call("db:seed",['--class'=>"DatabaseSeeder",]);
         $this->comment("completed successfully!");
     }
